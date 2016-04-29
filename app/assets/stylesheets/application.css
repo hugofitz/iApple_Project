@@ -1,0 +1,192 @@
+form{
+    
+    margin-left:150px;
+   
+}
+
+#login{
+    
+    margin-left:150px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li {
+    float: left;
+    align-content: center;
+    
+    
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color:gray;
+   
+     
+}
+
+a:link {
+     text-decoration:none;
+     display:inline-block;
+     color:black;
+    }
+
+a:visited {
+     text-decoration:none;
+     display:inline-block;
+     color:purple;
+    }
+
+a:hover {
+     text-decoration:underline;
+     display:inline-block;
+     color:blue;
+     }
+
+#navbar {
+     margin-left:30px;
+     font-size: 18px;
+     font-family:verdana;
+     background: #000;
+     text-align: center;
+     align-content: center;
+     padding:.5%;
+     color: gray;
+     text-indent:18px;
+     width:65%;
+     margin-top:15px;
+}
+
+#navbar li a {
+     color:gray;
+     text-align: center;
+   
+}
+
+#navbar a:visited {
+     text-decoration:none;
+     display:inline-block;
+     color:gray;
+}
+
+#navbar a:hover {
+     text-decoration:underline;
+     display:inline-block;
+     color:white;
+}
+
+#left {
+     margin-left:800px; 
+
+}
+
+#image {
+    float: right;
+    width:100px;
+    height:100px;
+    
+}
+
+.catalog {
+    margin-right:50px;
+    margin-left:-17px;
+}
+
+
+h1,h2 {
+     margin-left:180px;
+}
+
+#new {
+     margin-left:50px;  
+     margin-right:50px; 
+    
+}
+
+#form {
+     width:150px;    
+     margin-left:10px;
+     margin-right:10px;   
+}
+
+
+#footer { 
+
+     margin-left:500px;   
+     font-size:larger;
+     margin-top:-15px;
+}
+
+#container {
+     margin: auto;
+     margin-left:330px;  
+     margin-right:330px;  
+}
+
+#middle {
+     margin: auto;
+     margin-left:-298px; 
+     padding:0;
+     margin-right:330px;
+     margin-top:15px;
+}
+
+#techline {
+     
+     padding:0;
+     margin-left:30px;
+     margin-right:-330px;
+    
+}
+
+#widgets {
+     float:right;
+     padding:0;
+     margin-right:420px;
+     margin-left:10px; 
+     margin-top:-70px;
+}
+
+#about_us {
+     font-size:15px;
+     text-align:left;
+     width:600px;
+     color:black;
+     line-height: 1.5;
+     margin-top:5px;
+     margin-left:-50px;
+}
+      
+h5 {
+	 margin:0 0 10px 0;
+	 font-size:16px;
+	 font-weight:bold;
+	 display: inline-block;
+	 color:black;
+}
+
+.back-to-top {
+	 position: fixed;
+      margin-right:4px;            
+      bottom: 2em;
+	 right: 0px;
+	 text-decoration: none;
+	 color: #000000;
+	 background-color: rgba(235, 235, 235, 0.80);
+	 font-size: 15px;
+	 padding: 1em;
+	 display: none;
+}
+
+.back-to-top:hover {	
+	 background-color: rgba(135, 135, 135, 0.50);
+}

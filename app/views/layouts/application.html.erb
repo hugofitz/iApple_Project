@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iApple</title>
+    
+
+  <%= stylesheet_link_tag"application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script>
+ 
+         jQuery(document).ready(function() {
+             var offset = 220;
+             var time = 500;
+             jQuery(window).scroll(function() {
+                 if (jQuery(this).scrollTop() > offset) {
+                     jQuery('.back-to-top').fadeIn(time);
+                 } else {
+                     jQuery('.back-to-top').fadeOut(time);
+                 }
+             });
+         
+             jQuery('.back-to-top').click(function(event) {
+                 event.preventDefault();
+                 jQuery('html, body').animate({scrollTop: 0}, time);
+                 return false;
+             })
+         });
+      </script>
+</head>
+<body>
+   
+
+
+<div id='header'>
+    
+
+
+           <!-- Header Image Displayes here -->
+        </div>
+         <div id='menu'>
+            <a href="/site/home"><%= image_tag("iapple_logo.png", :alt => "iApple logo" ) %></a>
+            <div id='left'></div>
+             </div>
+             
+         <div id='techline'></div>
+             <div id="floatleft"><h3 style="display:inline;">24/7 Technical Support: 1800 356 356</h3>
+               </div>
+               
+            <div id='widgets'>
+                
+               <a href="/site/home"><%= image_tag("facebook.png", :alt => "Facebook" ) %></a>
+                <a href="/site/home"><%= image_tag("twitter.png", :alt => "Twitter" ) %></a>
+               
+             </div>
+            
+            
+             <div id="navbar">
+                <ul>
+                    <li><a href="/site/home">Home</a></li>
+                    <li><a href="/items">Shop</a></li> 
+                    <li><a href="/site/about">About</a></li> 
+                    <li><a href="/users/sign_up">Register</a></li> 
+                    <li><a href="/site/contact">Contact Us</a></li> 
+                    <li><a href="/users/sign_in">Login</a></li>
+                    <li><a href="/admins/sign_in">Store Login</a></li>
+                    </ul> </div>
+                    </div>
+                        
+            <div id='container'>
+                
+                    <div id='news'>
+                      <p class="notice"><%= notice %></p>
+   
+            <%= yield %>
+                </div>
+                </div></br>
+        
+            <a href="#" class="back-to-top">^</a>
+            
+                <div id='footer'>
+                 <h6 class="footertext">&copy;2016 iApple.com</h6> 
+            </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

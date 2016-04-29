@@ -1,0 +1,11 @@
+<% if admin_signed_in? %>
+ <div>You are currently signed in as: <%= current_admin.email %> (<%= link_to 'Sign out', destroy_admin_session_path, :method => :delete
+%>)</div>
+<% end %>  
+
+<h1>Editing Orderitem</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @orderitem %> |
+<%= link_to 'Back', orderitems_path %>

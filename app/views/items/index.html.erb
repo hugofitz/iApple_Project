@@ -1,0 +1,53 @@
+
+<% if admin_signed_in? %>
+ <div>You are in Administration mode (<%= link_to 'Sign out', destroy_admin_session_path, :method => :delete
+%>)</div>
+<% end %>  
+
+<h1>Our Products</h1>
+<br>
+ <%= form_tag(items_url, method: :get, role: 'search') do %>
+ 
+ Product Search:  <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+    <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+<% end %>
+<br>
+<table class="catalog">
+<% @items.each do |item| %> <tr>
+<td>
+<div class="image">
+<%= link_to (image_tag item.image, :style => "height:100px"), item %> </div>
+</td> <td>
+<div class="title">
+Product: <%= h item.product %>
+</div>
+<div class="colour">
+Colour: <%= h item.colour %>
+</div>
+<div class="category">
+Category: <%= h item.category %>
+</div>
+<div class="description">
+Description: <%=h item.description %> </div>
+<div class="price">
+Our Price: <%= number_to_currency(item.price, :unit => "€") %>
+<br >
+
+
+</div>
+
+<div class="links">
+<% if admin_signed_in? %>
+
+| <%= link_to 'Edit', edit_item_path(item) %> |
+<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %> | 
+<% else %>
+<a href="/cart/<%= item.id %>">Add to Cart</a><br><br>
+<% end %>
+</div>
+---------------------------
+</td> </tr>
+<% end %> </table>
+<% if admin_signed_in? %>
+<p><%= link_to '(New item ->)', new_item_path %></p>
+<% end %>
